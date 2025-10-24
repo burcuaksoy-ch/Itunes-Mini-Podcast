@@ -1,0 +1,36 @@
+:root { --gap: 14px; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background:#f6f7f9; color:#111; }
+
+header { position: sticky; top:0; backdrop-filter: blur(6px); background: rgba(255,255,255,.75); border-bottom:1px solid #e6e8ec; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 14px 16px; }
+h1 { font-size: 20px; margin: 0; }
+
+.controls { display:grid; grid-template-columns: 1.1fr .6fr .6fr auto; gap: var(--gap); margin-top: 12px; }
+.controls input, .controls select, .controls button {
+  height: 42px; padding: 0 12px; border:1px solid #d8dbe2; border-radius: 10px; background:#fff; font-size: 14px;
+}
+.controls button { cursor: pointer; border:1px solid #cfd3da; background: #111; color:#fff; }
+.controls button:disabled { opacity:.6; cursor:not-allowed; }
+
+main .wrap { padding-top: 18px; }
+.grid { display:grid; gap: var(--gap); grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+
+.card { background:#fff; border:1px solid #e6e8ec; border-radius: 16px; overflow:hidden; box-shadow: 0 2px 10px rgba(10,20,40,.04); display:flex; flex-direction:column; }
+.thumb { width:100%; aspect-ratio: 1/1; object-fit: cover; }
+.meta { padding: 12px; display:flex; flex-direction:column; gap:6px; }
+.title { font-weight: 600; line-height:1.2; }
+.author { color:#5a6476; font-size: 13px; }
+.tags { display:flex; gap:6px; flex-wrap: wrap; margin-top: 4px; }
+.tag { font-size: 12px; background:#f1f3f7; border:1px solid #e6e8ec; padding:2px 8px; border-radius:999px; }
+.links { display:flex; gap:8px; margin-top: 8px; }
+.links a { text-decoration: none; font-size: 13px; padding:6px 10px; border-radius: 8px; border:1px solid #dfe3ea; background:#fafbff; color:#1a1f2c; }
+
+.empty, .error { background:#fff; border:1px dashed #d0d7e2; color:#5a6476; border-radius: 12px; padding: 16px; text-align:center; }
+
+footer { color:#6b7280; font-size: 12px; text-align:center; padding: 28px 0 40px; }
+
+@media (max-width: 720px) {
+  .controls { grid-template-columns: 1fr 1fr; }
+  .controls > :nth-child(3), .controls > :nth-child(4) { grid-column: 1 / -1; }
+}

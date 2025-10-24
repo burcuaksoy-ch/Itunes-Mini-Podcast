@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  
+
+  <title>Mini Podcast Finder</title>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>🎧 Mini Podcast Finder</h1>
+      <div class="controls">
+        <input id="q" type="search" placeholder="Search topic… e.g., history, tech" />
+        <select id="country">
+          <option value="us">US</option>
+          <option value="gb">UK</option>
+          <option value="de">Germany</option>
+          <option value="fr">France</option>
+          <option value="es">Spain</option>
+          <option value="tr" selected>Turkey</option>
+        </select>
+        <select id="limit">
+          <option value="12">12 results</option>
+          <option value="24" selected>24 results</option>
+          <option value="48">48 results</option>
+        </select>
+        <button id="btn">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div id="status" class="empty">
+        Type a topic and click <b>Search</b> (uses iTunes API)
+      </div>
+      <div id="list" class="grid" hidden></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Tip: iTunes Search API returns podcast metadata (artwork, author, feed URL).
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+    
