@@ -1,13 +1,9 @@
-
-<img width="1845" height="851" alt="Podcast" src="https://github.com/user-attachments/assets/ed4f1005-07db-44a7-87e7-a88bc852205c" />
-
-
-
-
-
-
-
 # 🎧 Mini Podcast Finder
+
+## ![MiniPodcast](https://github.com/user-attachments/assets/8786782a-5aa0-4f20-8cb7-a17367bcab99)
+
+
+
 
 A simple web application that searches podcasts via the **iTunes Podcast API** based on user input keywords.
 Built with HTML, CSS, and JavaScript.
